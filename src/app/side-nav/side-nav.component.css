@@ -1,0 +1,62 @@
+.side_bar{
+    position: fixed;
+    top: 50%;
+    left: -11.25rem;
+    transform: translateY(-50%);
+    z-index: 1000;
+    @media only screen and (min-width: 100em)
+        {
+            left: -12.5rem
+        }
+}
+ul{
+    list-style: none;
+}
+a:visited, a:link{
+    display: block;
+    color: white;
+    font-size: 2.5rem;
+    padding: 1rem;
+    transition: all .5s cubic-bezier(.175,.885,.32,1.275), background-color .8s ease-in-out;
+    text-decoration: none;
+    @media only screen and (max-width: 31.25em)
+    {
+        padding: 1rem;
+    }
+    @media only screen and (min-width: 100em)
+    {
+        padding: 1.5rem;
+        font-size: 2.8rem;
+    }
+}
+
+a:hover, a:active, a:focus{
+    transform: translateX(6.4rem)
+}
+
+li a.linkedin-item{
+    background-color: #0077b5;
+}
+li a.github-item{
+    background-color:  #333
+}
+li a.email-item{
+    background-color:  #6fc2b0;
+}
+li a.resume-item{
+    background-color: #565f69;
+}
+
+span.side-bar-label{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.6rem;
+    margin-right: 1.6rem;
+    width: 5.8rem;
+    letter-spacing: 1px;
+    text-align: right;
+    @media only screen and (min-width: 100em)
+    {
+        width: 10.8rem;
+    }
+}

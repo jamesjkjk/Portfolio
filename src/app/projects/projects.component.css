@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Center website */
+.main {
+  max-width: 65%;
+  margin: auto;
+  z-index:100;
+  margin-top:10rem;
+}
+
+.portfolio-header{
+  font-size: 4rem;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.row {
+  margin: 4rem -8rem;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 4rem;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  transition: all .3s ease-out;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  position:relative;
+  background-color:#222327;
+  padding:8rem 0;
+  width:100%;
+  height:auto;
+  box-shadow: 0 0 10px #000;
+  opacity: 1;
+  cursor: pointer;
+  text-align:center;
+}
+img{
+  display:inline-block;
+  position:relative;
+  transition:all .2s;
+
+}
+img:after{
+  display: block;
+  padding-bottom: 100%;
+}
+
+/* Responsive layout */
+
+.overlay{
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(transparent, rgba(0,0,0,.5));
+  transition: all .2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content:hover .overlay{
+  opacity: 1;
+  visibility: visible;
+}
+.content:hover img{
+  transform:scale(1.1);
+}
+.project-buttons{
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.project-button{
+  display: inline-block;
+  text-decoration: none;
+  color: #22262a;
+  font-family: Staatliches,sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin: 0 1rem;
+  background-color: hsla(0,0%,100%,.8);
+  border: none;
+  border-radius: 3px;
+  padding: .5rem 2rem;
+  cursor: pointer;
+  transition: all .2s;
+  overflow-y: hidden;
+}
+.project-button:hover{
+  background-color: hsla(0,0%,100%,1);
+
+}
+/*Modal*/
+.modal-open{
+  position: fixed;
+  z-index:200;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow-y: hidden;
+}
+.holder{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.project-modal{
+  z-index:300;
+  margin:auto;
+  left:50%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+  display:inline-block;
+  position: relative;
+  user-select: text;
+  width: 100rem;
+  height: 50rem;
+  background-color: white;
+  box-shadow: 0 0 10px #000;
+}
+.modal-exit{
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: transparent;
+  border: none;
+  color: #94a4b4;
+  font-size: 3rem;
+  cursor: pointer;
+  /*transition: all .2s cubic-bezier(.175,.885,.32,1.275);*/
+}
+
+.modal-exit:hover {
+  transform:scale(1.1);
+}
+.modal-image{
+  width:60rem;
+  float:left;
+  height:100%;
+  background-color:#222327;
+  text-align:center;
+}
+.modal-image img{
+  object-fit: cover;
+  display:inline-block;
+  position:relative;
+  height:50%;
+  width:50%;
+  top: 50%;
+  transform:translateY(-50%);
+}
+.modal-info{
+  background-color: #343a41;
+  width:40%;
+  float:left;
+  height:100%;
+  padding: 1rem;
+  color:white;
+
+} 
+h1{
+  font-size: 1.6rem;
+  color: #94a4b4;
+  letter-spacing: 1px;
+  margin:.5rem;
+}
+h2{
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  margin:.5rem;
+}
+.project-technology-list{
+  list-style: none;
+  margin-bottom: 2rem;
+}
+.project-technology-list{
+  display: inline-block;
+  margin: .5rem;
+  border: 1px solid #22262a;
+  padding: .5rem;
+  color: #94a4b4;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+}
+.project-summary{
+  margin-top: 2rem;
+  padding-top: 1rem;
+  font-family: Inconsolata,sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #94a4b4;
+  overflow-y: scroll;
+  height: 22rem;
+  white-space: pre-line;
+}
+@media only screen and (max-width: 56.25em) 
+{
+  .project-modal{
+    width: 95%;
+    min-height: 50rem;
+  }
+  .modal-image{
+    width:55%;
+  }
+  .modal-info{
+    width:45%;
+  }
+}
+@media only screen and (max-width: 45em) 
+{
+  .project-modal{
+    width: 43rem;
+    height: auto;
+  }
+  .modal-image{
+    object-fit: contain;
+    width:100%;
+    height:auto;
+  }
+  .modal-info{
+    width:100%;
+  }
+  .modal-image img{
+    transform: translateY(0);
+  }
+  .column{
+    width:95%;
+  }
+}
+@media only screen and (max-width: 25em) 
+{
+  .project-modal{
+    width: 38rem;
+  }
+}

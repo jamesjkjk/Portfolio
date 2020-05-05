@@ -1,0 +1,61 @@
+<!-- MAIN (Center website) -->
+<div class="main">
+
+  <p class="portfolio-header">PORTFOLIO</p>
+ 
+  <!-- Portfolio Gallery Grid -->
+  <div class="row">
+    <div class="column">
+      <div class="content">
+        <img alt="LOGO" src="assets/pics/F_logo.png">
+        <div class="overlay">
+          <div class="project-buttons">
+            <button class="project-button" (click)='openModal()'>VIEW PROJECT</button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-open"  @myModalTrigger *ngIf="display" >
+      <div class="holder" *ngFor="let project of projects">
+        <div class="project-modal" >
+          <button class="modal-exit" (click)='closeModal()'>
+            <fa-icon [icon]="faWindowClose"></fa-icon>
+          </button>
+          <div class="modal-image">
+            <img alt="LOGO" src="{{ project.imagePath }}">
+          </div>
+          <div class="modal-info">
+            <h1>PROJECT</h1>
+            <h2 class="project-name">{{ project.name }}</h2>
+            <ul class="project-technology-list" *ngFor="let technology of project.technologies">
+              <li class="project-technology">{{technology}}</li>
+            </ul>
+            <h1>ABOUT</h1>
+            <p class="project-summary">{{project.summary}}</p>
+            <button class="project-button" >DEMO</button>
+            <button class="project-button" >CODE</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img alt="LOGO" src="assets/pics/F_logo.png">
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img alt="LOGO" src="assets/pics/F_logo.png">
+      </div>
+    </div>
+    <div class="column">
+      <div class="content">
+        <img alt="LOGO" src="assets/pics/F_logo.png">
+      </div>
+    </div>
+  <!-- END GRID -->
+  </div>
+  
+  
+  <!-- END MAIN -->
+  </div>

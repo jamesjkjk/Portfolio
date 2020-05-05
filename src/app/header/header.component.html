@@ -1,0 +1,24 @@
+<label class="logo-button">
+    <a routerLink='/VideoComponent' class="logo">
+        <img alt="LOGO" src="assets/pics/logo.png">
+    </a>
+</label>
+<div class="header-button" (click)="enter()">
+    <div class="nav_line"></div>
+    <div class="nav_line"></div>
+    <div class="nav_line"></div>
+</div> 
+<div  @myInsertRemoveTrigger class="nav" *ngIf="isShown">
+    <ul class="nav-container">
+        <li class="nav-item">
+            <a routerLink='/VideoComponent' (click)="enter()" class="nav-link"> 
+                <span>HOME</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a routerLink='/ProjectsComponent' (click)="enter()" class="nav-link"> 
+                <span>PROJECT</span>
+            </a>
+        </li>
+    </ul>
+</div>
