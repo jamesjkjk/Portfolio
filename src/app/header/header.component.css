@@ -1,0 +1,116 @@
+
+* {box-sizing: border-box;}
+
+.header-button {
+    position: fixed;
+    top: 3rem;
+    right: 4rem;
+    z-index: 1000;
+    width: 5rem;
+    cursor: pointer;
+    @media only screen and (min-width: 120em)
+    {
+        width: 6.2rem;
+    }
+}
+.header-button div.nav_line{
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    transition: all .3s cubic-bezier(.175,.885,.32,1.275), background-color .3s ease-in-out;
+    vertical-align: middle;
+    background-color: white;
+    margin: auto;
+}
+div.nav_line:first-child, div.nav_line:nth-child(3) {
+    transform-origin: 5.5% 50%;
+}
+.header-button:hover div.nav_line:nth-child(1)
+{
+    transform: translateY(-.4rem)
+}
+.header-button:hover div.nav_line:nth-child(3)
+{
+    transform: translateY(.4rem)
+}
+.logo-button{
+    z-index:1000;
+    position:fixed;
+    top: 4rem;
+    left: 4rem;
+}
+
+.logo{
+    width: 30rem;
+    height: 6rem;
+    display: block;
+}
+img{
+    width:100%;
+    height:100%;
+}
+.nav{
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    background: #343a41;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-out;
+    
+}
+.nav-container{
+    list-style: none;
+    width: 60rem;
+    margin: auto;
+    @media only screen and (max-width: 31.25em)
+    {
+        width: 80%;
+    }
+    @media only screen and (min-width: 100em)
+    {
+        width: 80rem;
+    }
+}
+.nav-item {
+    width: 100%;
+}
+
+.nav-link:visited, .nav-link:link{
+    width: 100%;
+    padding: 2.5rem 0;
+    display: block;
+    text-align: center;
+    font-size: 3.5rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    background: #31363b;
+}
+span {position: relative;}
+.nav-link::before 
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #252a2e;
+    transform: scaleX(0);
+    transition: all 300ms ease-out;
+}
+.nav-link:hover:before , .nav-link:active:before , .nav-link:focus:before 
+{
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scaleX(1);
+}
+
+
+

@@ -1,0 +1,14 @@
+<div class="yellow-cursor flash-cursor">
+<video #video (canplay)="video.play()" (loadedmetadata)="video.muted = true">
+  <source src="assets/pics/vegas.mp4" type="video/mp4">
+</video>
+
+<!-- Optional: some overlay text to describe the video -->
+<div class="container">
+  <a>My name is James.</a><br>
+  <a>This is my team </a><br>
+  <a>{{time_string}} seconds</a><br>
+  <a>from victory</a><br>
+  <button routerLink='/ProjectsComponent'>View Projects</button>
+</div>
+</div>

@@ -1,0 +1,62 @@
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index:100;
+  }
+  
+  /* Add some content at the bottom of the video/page */
+  .container {
+    z-index:500;
+    position: fixed;
+    top:40%;
+    transform: translateY(-50%);
+    color: #f1f1f1;
+    letter-spacing: 1px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+  .container a{
+      font-size:4rem;
+  }
+  
+  /* Style the button used to pause/play the video */
+
+  button{
+    text-decoration: none;
+    color: #22262a;
+    font-family: Staatliches,sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-top:4rem;
+    background-color: hsla(0,0%,100%,.8);
+    border: none;
+    border-radius: 3px;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    transition: all .2s;
+    overflow-y: hidden;
+  }
+  button:hover{
+    background-color: hsla(0,0%,100%,1);
+  }
+
+  .yellow-cursor {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="yellow"/></svg>'), auto;
+  }
+  @keyframes flash {
+    0%, 100% {
+      box-shadow: 0 0 10px yellow;
+    }
+    50% {
+      box-shadow: 0 0 20px yellow;
+    }
+  }
+  
+  .flash-cursor {
+    animation: flash 1s infinite;
+  }

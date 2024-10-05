@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+html{
+    min-height: 100%;
+    padding: 1.5rem;
+    background-color: #22262a;
+    position: relative;
+    font-size:62.5%;
+}
+@font-face {
+    font-family: 'Staatliches';
+    src:url('assets/Staatliches-Regular.ttf');
+}
+body {
+    font-family: 'Staatliches',sans-serif;
+}
