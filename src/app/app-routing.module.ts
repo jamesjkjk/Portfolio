@@ -5,7 +5,7 @@ import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
   { path: '', component: VideoComponent},
-  { path: 'ProjectsComponent', component: ProjectsComponent},
+  { path: 'projects', component: ProjectsComponent},
 ];
 
 @NgModule({

@@ -1,7 +1,7 @@
 .side_bar{
     position: fixed;
     top: 50%;
-    left: -11.25rem;
+    left: -11rem;
     transform: translateY(-50%);
     z-index: 1000;
    

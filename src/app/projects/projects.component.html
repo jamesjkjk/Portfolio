@@ -37,8 +37,8 @@
               </ul>
               <h1>ABOUT</h1>
               <p class="project-summary">{{currentProject!.summary}}</p>
-              <a class="project-button" href="currentProject.demo_link">DEMO</a>
-              <a class="project-button" href="currentProject.code_link">CODE</a>
+              <a class="project-button" [href]="currentProject?.demo_link">DEMO</a>
+              <a class="project-button" [href]="currentProject?.code_link">CODE</a>
             </div>
           </div>
         </div>

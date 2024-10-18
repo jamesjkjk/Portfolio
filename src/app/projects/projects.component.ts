@@ -48,8 +48,8 @@ export class ProjectsComponent implements OnInit {
       summary: `The current portfolio that you are viewing. This was done in Angular. This is deployed to an Azure Static Web App. Also note that Azure resources were used to purchase a domain and route it to this web app.`,
       thumbnail: 'assets/pics/portfolio.PNG',
       imagePath: ['assets/pics/portfolio.PNG'],
-      code_link: 'link',
-      demo_link: 'link',
+      code_link: 'https://github.com/jamesjkjk/Portfolio',
+      demo_link: 'https://jamesjkjk.com/',
       technologies: ['Angular 15','Azure','Typescript']
     });
     console.log(this.projects)
