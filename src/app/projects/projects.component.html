@@ -2,60 +2,51 @@
 <div class="main">
 
   <h1 class="portfolio-header">PORTFOLIO</h1>
- 
+
   <!-- Portfolio Gallery Grid -->
   <div class="projects-container">
-    <div class="project">
+    <div class="project" *ngFor="let project of projects">
       <div class="content">
-        <img alt="LOGO" src="assets/pics/F_logo.png">
+        <img alt="LOGO" [src]="project.thumbnail">
         <div class="overlay">
           <div class="project-buttons">
-            <button class="project-button" (click)='openModal()'>VIEW PROJECT</button>
+            <button class="project-button" (click)='openModal(project!)'>VIEW PROJECT</button>
           </div>
         </div>
       </div>
-      <div class="modal-open" @myModalTrigger *ngIf="display" >
-      <div class="holder" *ngFor="let project of projects">
-        <div class="project-modal" >
-          <button class="modal-exit" (click)='closeModal()'>
-            <fa-icon [icon]="faWindowClose"></fa-icon>
-          </button>
-          <div class="modal-image">
-            <img alt="LOGO" src="{{ project.imagePath }}">
-          </div>
-          <div class="modal-info">
-            <h1>PROJECT</h1>
-            <h2 class="project-name">{{ project.name }}</h2>
-            <ul class="project-technology-list" *ngFor="let technology of project.technologies">
-              <li class="project-technology">{{technology}}</li>
-            </ul>
-            <h1>ABOUT</h1>
-            <p class="project-summary">{{project.summary}}</p>
-            <button class="project-button" >DEMO</button>
-            <button class="project-button" >CODE</button>
+      <div class="modal-open" *ngIf="display">
+        <div class="holder">
+          <div class="project-modal">
+            <button class="modal-exit" (click)='closeModal()'>
+              <fa-icon [icon]="faWindowClose"></fa-icon>
+            </button>
+            <div class="modal-image">
+              <div class="carousel">
+                <ngb-carousel>
+                  <ng-template ngbSlide *ngFor="let image of currentProject!.imagePath">
+                    <img [src]="image" alt="LOGO" class="carousel-image">
+                  </ng-template>
+                </ngb-carousel>
+              </div>
+            </div>
+            <div class="modal-info">
+              <h1>PROJECT</h1>
+              <h2 class="project-name">{{ currentProject!.name }}</h2>
+              <ul class="project-technology-list" *ngFor="let technology of currentProject!.technologies">
+                <li class="project-technology">{{technology}}</li>
+              </ul>
+              <h1>ABOUT</h1>
+              <p class="project-summary">{{currentProject!.summary}}</p>
+              <a class="project-button" href="currentProject.demo_link">DEMO</a>
+              <a class="project-button" href="currentProject.code_link">CODE</a>
+            </div>
           </div>
         </div>
       </div>
-      </div>
     </div>
-    <div class="project">
-      <div class="content">
-        <img alt="LOGO" src="assets/pics/F_logo.png">
-      </div>
-    </div>
-    <div class="project">
-      <div class="content">
-        <img alt="LOGO" src="assets/pics/F_logo.png">
-      </div>
-    </div>
-    <div class="project">
-      <div class="content">
-        <img alt="LOGO" src="assets/pics/F_logo.png">
-      </div>
-    </div>
-  <!-- END GRID -->
+    <!-- END GRID -->
   </div>
-  
-  
+
+
   <!-- END MAIN -->
-  </div>
+</div>

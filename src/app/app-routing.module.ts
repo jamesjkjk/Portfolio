@@ -5,7 +5,6 @@ import { ProjectsComponent } from './projects/projects.component';
 
 const routes: Routes = [
   { path: '', component: VideoComponent},
-  { path: 'VideoComponent', component: VideoComponent},
   { path: 'ProjectsComponent', component: ProjectsComponent},
 ];
 

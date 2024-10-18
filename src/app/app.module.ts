@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgOptimizedImage } from '@angular/common';
+import { NgbCarouselConfig, NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [					
@@ -26,9 +27,10 @@ import { NgOptimizedImage } from '@angular/common';
     AppRoutingModule,
     FontAwesomeModule,
     NgOptimizedImage,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbCarouselModule,
   ],
-  providers: [],
+  providers: [NgbCarouselConfig],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

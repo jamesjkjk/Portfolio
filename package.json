@@ -22,6 +22,9 @@
     "@fortawesome/angular-fontawesome": "^0.12.1",
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
+    "@ng-bootstrap/ng-bootstrap": "^14.2.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
